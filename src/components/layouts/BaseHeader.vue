@@ -50,5 +50,6 @@ const appTitleCN = "基于 Element+ 的 Vite 框架"
 }
 .logo {
   width: auto;
+  padding-left: 20px;
 }
 </style>

@@ -76,7 +76,7 @@
 import { toggleDark } from '~/composables';
 import { ref } from 'vue'
 import {
-  House as Home,
+  HomeFilled as Home,
   InfoFilled as About,
   Grid as Layout,
   Avatar as Worship
