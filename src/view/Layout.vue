@@ -6,7 +6,7 @@
       align-items: center; 
       justify-content: center;
       background-color: var(--ep-color-primary-light-7);">
-      Header</el-header>
+      Header<br>BaseHeader.vue</el-header>
       <el-container>
         <el-aside style="display: flex;
         width: 200px;
@@ -14,18 +14,18 @@
         align-items: center; 
         justify-content: center;
         background-color: var(--ep-color-primary-light-8)">
-        Aside</el-aside>
+        Aside<br>BaseSide.vue</el-aside>
         <el-container>
           <el-main style="display: flex; 
           align-items: center; 
           justify-content: center;
           background-color: var(--ep-color-primary-light-9)">
-          Main</el-main>
+          Main<br>view/*.vue<br>displayed with RouterView</el-main>
           <el-footer style="display: flex; 
           align-items: center; 
           justify-content: center;
           background-color: var(--ep-color-primary-light-7);">
-          Footer</el-footer>
+          Footer<br>BaseFooter.vue</el-footer>
         </el-container>
       </el-container>
     </el-container>
