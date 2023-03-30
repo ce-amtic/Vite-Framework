@@ -12,11 +12,15 @@
       <template #title>Home</template>
     </el-menu-item>
     <el-menu-item index="/instance">
-      <el-icon><Grid /></el-icon>
-      <template #title>Instance</template>
+      <el-icon><About /></el-icon>
+      <template #title>About</template>
+    </el-menu-item>
+    <el-menu-item index="/layout" disabled>
+      <el-icon><Layout /></el-icon>
+      <template #title>Layout</template>
     </el-menu-item>
     <el-menu-item index="/worship">
-      <el-icon><Avatar /></el-icon>
+      <el-icon><Worship /></el-icon>
       <template #title>STO sls Orz</template>
     </el-menu-item>
     <el-menu-item>
@@ -73,8 +77,9 @@ import { toggleDark } from '~/composables';
 import { ref } from 'vue'
 import {
   House as Home,
-  Grid,
-  Avatar
+  InfoFilled as About,
+  Grid as Layout,
+  Avatar as Worship
 } from '@element-plus/icons-vue'
 
 const isCollapse = ref(true)
