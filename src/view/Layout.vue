@@ -9,7 +9,7 @@
       Header<br>BaseHeader.vue</el-header>
       <el-container>
         <el-aside style="display: flex;
-        width: 200px;
+        width: 120px;
         height: 500px; 
         align-items: center; 
         justify-content: center;
