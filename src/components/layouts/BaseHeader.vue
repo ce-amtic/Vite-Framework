@@ -4,8 +4,7 @@
     <div class="title">
       <p>{{ appTitle }}</p>
     </div>
-  </el-menu>
-      
+  </el-menu> 
 
   <!--el-menu class="el-menu-demo" mode="horizontal">
     <el-menu-item index="1">Element Plus</el-menu-item>
@@ -32,6 +31,7 @@
 </template>
 
 <script lang="ts" setup>
+import { toggleDark } from '~/composables';
 const appTitle = "Vite Framework Based on Element+"
 const appTitleCN = "基于 Element+ 的 Vite 框架"
 </script>
@@ -39,6 +39,7 @@ const appTitleCN = "基于 Element+ 的 Vite 框架"
 <style scoped>
 .el-menu-demo {
   height: 60px;
+  display: flex;
 }
 .title {
   width: auto;
@@ -51,5 +52,8 @@ const appTitleCN = "基于 Element+ 的 Vite 框架"
 .logo {
   width: auto;
   padding-left: 20px;
+}
+.header-button {
+  align-items: right;
 }
 </style>

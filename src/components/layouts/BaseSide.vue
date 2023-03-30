@@ -11,11 +11,11 @@
       <el-icon><Home /></el-icon>
       <template #title>Home</template>
     </el-menu-item>
-    <el-menu-item index="/instance">
+    <el-menu-item index="/about">
       <el-icon><About /></el-icon>
       <template #title>About</template>
     </el-menu-item>
-    <el-menu-item index="/layout" disabled>
+    <el-menu-item index="/layout">
       <el-icon><Layout /></el-icon>
       <template #title>Layout</template>
     </el-menu-item>
@@ -23,11 +23,13 @@
       <el-icon><Worship /></el-icon>
       <template #title>STO sls Orz</template>
     </el-menu-item>
-    <el-menu-item>
+    <el-menu-item style="align-items: center; width: auto;">
       <button @click="toggleDark()" 
               class="border-none w-full bg-transparent cursor-pointer" 
-              style="height: var(--ep-menu-item-height);">
-        <i inline-flex i="dark:ep-moon ep-sunny" />
+              style="padding: 0; align-items: center; width: auto;">
+        <el-icon v-if="isDark"><Moon /></el-icon>
+        <el-icon v-else><Sunny /></el-icon>
+        <!--i inline-flex i="dark:ep-moon ep-sunny" /-->
       </button>
     </el-menu-item>
   </el-menu>
@@ -73,13 +75,15 @@
 </template>
 
 <script lang="ts" setup>
-import { toggleDark } from '~/composables';
+import { isDark, toggleDark } from '~/composables';
 import { ref } from 'vue'
 import {
   HomeFilled as Home,
   InfoFilled as About,
   Grid as Layout,
-  Avatar as Worship
+  Avatar as Worship,
+  Sunny,
+  Moon,
 } from '@element-plus/icons-vue'
 
 const isCollapse = ref(true)
