@@ -1,6 +1,6 @@
 <template>
   <el-menu class="hidden-sm-and-down" mode="horizontal">
-    <a class="logo-box" href="/">
+    <a class="logo-box" href="">
       <img alt="logo" class="logo" src="../../assets/logo.png" width="10%"/>
     </a>
     <div class="title">

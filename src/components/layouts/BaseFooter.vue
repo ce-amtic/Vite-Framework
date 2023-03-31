@@ -9,12 +9,12 @@
     </a> 
   </p>
   <p>
-    <a :href="footerMsg.repoLink" target="_blank" 
+    <a :href="footerMsg.repoLink" target="_blank" title="Repositories"
        style="color: var(--ep-text-color-secondary)">
        <i class="fa fa-github"></i>
     </a>
     &nbsp;
-    <a :href="footerMsg.BE_Link" target="_blank" 
+    <a :href="footerMsg.BE_Link" target="_blank" title="Server"
        style="color: var(--ep-text-color-secondary)">
        <i class="fa fa-server"></i>
     </a>
