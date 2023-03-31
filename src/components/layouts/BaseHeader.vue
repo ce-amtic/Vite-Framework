@@ -1,5 +1,5 @@
 <template>
-  <el-menu class="el-menu-demo" mode="horizontal" v-if="window.width>=700">
+  <el-menu class="hidden-sm-and-down" mode="horizontal">
     <a class="logo-box" href="/">
       <img alt="logo" class="logo" src="../../assets/logo.png" width="10%"/>
     </a>
@@ -7,7 +7,7 @@
       <p>{{ appTitle }}</p>
     </div>
   </el-menu> 
-  <el-menu class="el-menu-demo-sm" mode="horizontal" v-else>
+  <el-menu class="hidden-sm-and-up" mode="horizontal">
     <a class="logo-box-sm" href="/">
       <img alt="logo" class="logo" src="../../assets/logo-s.png" width="10%"/>
     </a>
@@ -39,19 +39,18 @@
 </template>
 
 <script lang="ts" setup>
-import { window } from "~/composables"
 const appTitle = "Vite Framework Based on Element+"
 const appTitleCN = "基于 Element+ 的 Vite 框架"
 </script>
 
 <style scoped>
-.el-menu-demo {
+.hidden-sm-and-down {
   height: 62px;
   display: flex;
   align-items: center;
   justify-content: left;
 }
-.el-menu-demo-sm {
+.hidden-sm-and-up {
   height: 56px;
   display: flex;
   align-items: center;

@@ -48,7 +48,7 @@
   font-size: 18px;
   text-align: left;
   margin: auto;
-  width: 600px;
+  width: 500px;
   top: 0;
 	left: 0;
 	right: 0;
