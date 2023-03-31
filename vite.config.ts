@@ -18,6 +18,10 @@ const pathSrc = path.resolve(__dirname, 'src')
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/vite-framework-example/',
+  server: {
+    // port: 8080,
+  }, 
   resolve: {
     alias: {
       '~/': `${pathSrc}/`,
