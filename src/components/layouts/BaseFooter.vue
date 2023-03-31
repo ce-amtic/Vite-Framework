@@ -13,6 +13,11 @@
        style="color: var(--ep-text-color-secondary)">
        <i class="fa fa-github"></i>
     </a>
+    &nbsp;
+    <a :href="footerMsg.BE_Link" target="_blank" 
+       style="color: var(--ep-text-color-secondary)">
+       <i class="fa fa-server"></i>
+    </a>
   </p>
   <p>
   </p>
@@ -29,6 +34,7 @@ const footerMsg = ref({
   date: date.getUTCFullYear(),
   projName: 'Project Name',
   repoLink: 'https://github.com/ce-amtic/vite-framework',
+  BE_Link: '',
   creditName: 'Element+',
   creditLink: 'https://element-plus.org/',
 })

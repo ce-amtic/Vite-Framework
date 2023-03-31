@@ -14,10 +14,10 @@
       BaseHeader.vue --- header
       BaseSide.vue ----- vertical navigate bar
       BaseFooter.vue --- footer
-    HelloWorld.vue ----- example usage of Element+ components
-  composables/
-    dark.ts ------------ define dark mode behavior
-    index.ts
+    HelloWorld.vue ----- Element-Plus examples
+    *.vue -------------- components
+  composables/ --------- global declare
+    *.ts
   router/
     index.ts ----------- using RouterView
   styles/
@@ -26,9 +26,9 @@
       index.scss
     index.scss
   view/
-    *.vue -------------- define pages
-  App.vue -------------- main layout
-  main.ts -------------- define app behavior
+    *.vue -------------- pages
+  App.vue -------------- main window
+  main.ts -------------- app behavior
 
 /
   vite.config.ts -------- vite config

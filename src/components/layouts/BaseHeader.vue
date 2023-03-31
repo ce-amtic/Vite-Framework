@@ -1,11 +1,17 @@
 <template>
-  <el-menu class="el-menu-demo" mode="horizontal">
+  <el-menu class="el-menu-demo" mode="horizontal" v-if="window.width>=700">
     <a class="logo-box" href="/">
       <img alt="logo" class="logo" src="../../assets/logo.png" width="10%"/>
     </a>
     <div class="title">
       <p>{{ appTitle }}</p>
     </div>
+  </el-menu> 
+  <el-menu class="el-menu-demo-sm" mode="horizontal" v-else>
+    <a class="logo-box-sm" href="/">
+      <img alt="logo" class="logo" src="../../assets/logo-s.png" width="10%"/>
+    </a>
+    <p>{{ appTitle }}</p>
   </el-menu> 
 
   <!--el-menu class="el-menu-demo" mode="horizontal">
@@ -33,32 +39,47 @@
 </template>
 
 <script lang="ts" setup>
-import { toggleDark } from '~/composables';
+import { window } from "~/composables"
 const appTitle = "Vite Framework Based on Element+"
 const appTitleCN = "基于 Element+ 的 Vite 框架"
 </script>
 
 <style scoped>
 .el-menu-demo {
-  height: 60px;
+  height: 62px;
   display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.el-menu-demo-sm {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: auto;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .title {
-  width: auto;
   padding-left: 20px;
   line-height: 100%;
-  align-items: center;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .logo-box {
-  width: 10%;
+  height: 100%;
+  width: auto;
   padding-left: 20px;
 }
-.logo {
-  width: 100%
+.logo-box-sm {
+  height: 100%;
+  width: auto;
+  padding-left: 0;
 }
-.header-button {
-  align-items: right;
+.logo {
+  height: 100%;
+  width: auto;
 }
 </style>

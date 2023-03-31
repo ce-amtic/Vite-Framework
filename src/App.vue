@@ -3,12 +3,13 @@
     <BaseHeader />
     <div style="display: flex">
       <BaseSide />
-        <el-container>
-          <el-main> <RouterView></RouterView> </el-main>
-          <el-footer class="el-footer-demo" 
-                     style="height: auto; align-items: center;"> <BaseFooter /> </el-footer>
-        </el-container>
+      <el-container>
+        <el-main> <RouterView></RouterView> </el-main>
+        <el-footer class="el-footer-demo" 
+                   style="height: auto; align-items: center;"> <BaseFooter /> </el-footer>
+      </el-container>
     </div>
+  <ShowMenu />
   </el-config-provider>
 </template>
 

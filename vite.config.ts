@@ -20,6 +20,7 @@ const pathSrc = path.resolve(__dirname, 'src')
 export default defineConfig({
   base: process.env.NODE_ENV === 'production' ? '/vite-framework/' : '/',
   server: {
+    host: '0.0.0.0',
     // port: 8080,
   }, 
   build: {
