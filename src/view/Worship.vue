@@ -9,9 +9,11 @@
          alt="sls" class="avatar"/>
   </el-row>
   <br>
-  <el-row justify="center" v-if="showMsg"><p>COME ON! PRESS IT!!</p></el-row>
+  <el-collapse-transition>
+    <div v-show="showMsg" class="transition-box">COME ON! PRESS IT!!</div>
+  </el-collapse-transition>
   <div class="mb-4">
-    <el-button size="large" type="warning" 
+    <el-button size="large" type="warning"
       @click="count++">STO sls Orz</el-button>
   </div>
   <div class="mb-4">
@@ -46,7 +48,7 @@ const hint = () => {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   text-align: center;
   color: var(--ep-text-color-primary);
@@ -56,5 +58,17 @@ const hint = () => {
   width: 200px;
   border-radius: 10%;
   box-shadow: rgb(239, 249, 93) 0px 0px 60px;
+}
+.transition-box {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--ep-color-warning-dark-2)
 }
 </style>

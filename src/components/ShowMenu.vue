@@ -1,22 +1,20 @@
 <template>
   <div class="hidden-sm-and-up">
-    <transition name="el-fade-in-linear">
-      <div v-if="isFold">
-      <el-button type="" class="float-button"
-        :icon="Menu" 
-        circle 
-        size="large"
-        @click="toggleFold"
-      /></div>
-      <div v-else>
-      <el-button class="float-button"
-        :icon="FoldMenu" 
-        circle 
-        autofocus
-        size="large"
-        @click="toggleFold"
-      /></div>
-    </transition>
+    <div v-if="isFold">
+    <el-button type="" class="float-button"
+      :icon="Menu" 
+      circle 
+      size="large"
+      @click="toggleFold"
+    /></div>
+    <div v-else>
+    <el-button class="float-button"
+      :icon="FoldMenu" 
+      circle 
+      autofocus
+      size="large"
+      @click="toggleFold"
+    /></div>
   </div>
 </template>
 

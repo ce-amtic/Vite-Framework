@@ -51,7 +51,7 @@ const appTitleCN = "基于 Element+ 的 Vite 框架"
   justify-content: left;
 }
 .hidden-sm-and-up {
-  height: 56px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,8 +74,7 @@ const appTitleCN = "基于 Element+ 的 Vite 框架"
 }
 .logo-box-sm {
   height: 100%;
-  width: auto;
-  padding-left: 0;
+  padding: 0;
 }
 .logo {
   height: 100%;
