@@ -1,6 +1,6 @@
 ### Vite Framework Based on Element+
 
-Requires Vue 3 and Vite.
+Requires Vite and Vue3. You're supposed to install node.js beforehand.
 
 Forked from [element-plus-vite-starter](https://github.com/element-plus/element-plus-vite-starter).
 

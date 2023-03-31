@@ -18,7 +18,7 @@ const pathSrc = path.resolve(__dirname, 'src')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vite-framework/',
+  base: process.env.NODE_ENV === 'production' ? '/vite-framework/' : '/',
   server: {
     // port: 8080,
   }, 

@@ -1,29 +1,37 @@
 <template>
   <el-divider />
   <!--p>© {{ footerMsg.date }} {{ footerMsg.name }}</p-->
-  <p>
-    Developed by 
-    <a :href="footerMsg.link" target="_blank"> {{ footerMsg.name }} </a>
+  <p style="color: var(--ep-text-color-secondary)">
+     {{ footerMsg.projName }} | Powered by 
+     <a :href="footerMsg.creditLink" target="_blank"
+       style="color: var(--ep-text-color-secondary)"> 
+       {{ footerMsg.creditName }} 
+    </a> 
   </p>
   <p>
-    Powered by 
-    <a :href="footerMsg.origin" target="_blank"> {{ footerMsg.credit }} </a>
+    <a :href="footerMsg.repoLink" target="_blank" 
+       style="color: var(--ep-text-color-secondary)">
+       <i class="fa fa-github"></i>
+    </a>
+  </p>
+  <p>
   </p>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import {
+  ElementPlus,
+} from '@element-plus/icons-vue'
 
 const date = new Date()
 const footerMsg = ref({
   date: date.getUTCFullYear(),
-  link: 'https://github.com/ce-amtic/',
-  name: 'Developers',
-  origin: 'https://element-plus.org/',
-  credit: 'Element+'
+  projName: 'Project Name',
+  repoLink: 'https://github.com/ce-amtic/vite-framework',
+  creditName: 'Element+',
+  creditLink: 'https://element-plus.org/',
 })
-
-const getLink = () => {footerMsg.value.link}
 </script>
 
 <style scoped>

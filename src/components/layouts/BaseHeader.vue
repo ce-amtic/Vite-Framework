@@ -1,6 +1,8 @@
 <template>
   <el-menu class="el-menu-demo" mode="horizontal">
-    <img alt="logo" class="logo" src="../../assets/logo.png" width="10%"/>
+    <a class="logo-box" href="/">
+      <img alt="logo" class="logo" src="../../assets/logo.png" width="10%"/>
+    </a>
     <div class="title">
       <p>{{ appTitle }}</p>
     </div>
@@ -49,9 +51,12 @@ const appTitleCN = "基于 Element+ 的 Vite 框架"
   font-size: 20px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.logo {
-  width: auto;
+.logo-box {
+  width: 10%;
   padding-left: 20px;
+}
+.logo {
+  width: 100%
 }
 .header-button {
   align-items: right;
