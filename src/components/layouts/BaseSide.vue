@@ -69,5 +69,7 @@ const handleClose = (key: string, keyPath: string[]) => {
 .el-menu-vertical-demo{
   width: 64px;
   min-width: 64px!important;
+  box-shadow: var(--ep-fill-color-lighter) 7px -5px 5px; 
+  z-index: 9;
 }
 </style>

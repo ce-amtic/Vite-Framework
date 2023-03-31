@@ -11,7 +11,7 @@
     <a class="logo-box-sm" href="/">
       <img alt="logo" class="logo" src="../../assets/logo-s.png" width="10%"/>
     </a>
-    <p>{{ appTitle }}</p>
+    <p>{{ appTitleShorten }}</p>
   </el-menu> 
 
   <!--el-menu class="el-menu-demo" mode="horizontal">
@@ -40,7 +40,7 @@
 
 <script lang="ts" setup>
 const appTitle = "Vite Framework Based on Element+"
-const appTitleCN = "基于 Element+ 的 Vite 框架"
+const appTitleShorten = "Vite Framework"
 </script>
 
 <style scoped>
@@ -49,6 +49,8 @@ const appTitleCN = "基于 Element+ 的 Vite 框架"
   display: flex;
   align-items: center;
   justify-content: left;
+  box-shadow: var(--ep-text-color-disabled) 0px -2px 10px;
+  z-index: 10;
 }
 .hidden-sm-and-up {
   height: 52px;
@@ -56,6 +58,8 @@ const appTitleCN = "基于 Element+ 的 Vite 框架"
   align-items: center;
   justify-content: center;
   font-size: auto;
+  box-shadow: var(--ep-text-color-disabled) 0px 0px 10px;
+  z-index: 10;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .title {

@@ -1,15 +1,17 @@
 <template>
   <el-config-provider namespace="ep" class="main-container">
+    <!--div style="display: flex; flex-flow: column;-->
     <BaseHeader />
-    <div style="display: flex">
+    <el-container>
       <BaseSide />
-      <el-container>
+      <el-container style="z-index: 8">
         <el-main> <RouterView></RouterView> </el-main>
         <el-footer class="el-footer-demo" 
-                   style="height: auto; align-items: center;"> <BaseFooter /> </el-footer>
+          style="height: auto; align-items: center;"
+        > <BaseFooter /> </el-footer>
       </el-container>
-    </div>
-  <ShowMenu />
+    </el-container>
+    <ShowMenu />
   </el-config-provider>
 </template>
 

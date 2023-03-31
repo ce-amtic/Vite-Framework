@@ -1,20 +1,22 @@
 <template>
   <div class="hidden-sm-and-up">
     <div v-if="isFold">
-    <el-button type="" class="float-button"
-      :icon="Menu" 
-      circle 
-      size="large"
-      @click="toggleFold"
-    /></div>
+      <el-button class="float-button"
+        type="primary"
+        circle 
+        size="large"
+        @click="toggleFold"
+      ><el-icon><Menu /></el-icon></el-button>
+    </div>
     <div v-else>
-    <el-button class="float-button"
-      :icon="FoldMenu" 
-      circle 
-      autofocus
-      size="large"
-      @click="toggleFold"
-    /></div>
+      <el-button class="float-button"
+        type="primary"
+        circle 
+        autofocus
+        size="large"
+        @click="toggleFold"
+      ><el-icon><FoldMenu /></el-icon></el-button>
+    </div>
   </div>
 </template>
 
@@ -29,7 +31,11 @@ import {
 <style scoped>
 .float-button {
   position: fixed;
-  bottom: 40px;
+  height: 50px;
+  width: 50px;
+  bottom: 20px;
   right: 20px;
+  z-index: 10;
+  font-size: 18px;
 }
 </style>
