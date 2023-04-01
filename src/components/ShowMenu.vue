@@ -1,22 +1,16 @@
 <template>
   <div class="hidden-sm-and-up">
-    <div v-if="isFold">
-      <el-button class="float-button"
-        type="primary"
-        circle 
-        size="large"
-        @click="toggleFold"
-      ><el-icon><Menu /></el-icon></el-button>
-    </div>
-    <div v-else>
-      <el-button class="float-button"
-        type="primary"
-        circle 
-        autofocus
-        size="large"
-        @click="toggleFold"
-      ><el-icon><FoldMenu /></el-icon></el-button>
-    </div>
+    <el-button class="float-button"
+      type="primary"
+      circle 
+      size="large"
+      @click="toggleFold"
+    >
+      <transition name="aniFadeRotate">
+        <el-icon v-if="isFold"><Menu /></el-icon>
+        <el-icon v-else><FoldMenu /></el-icon>
+      </transition>
+    </el-button>
   </div>
 </template>
 
@@ -37,5 +31,6 @@ import {
   right: 20px;
   z-index: 10;
   font-size: 18px;
+  box-shadow: var(--ep-text-color-disabled) 0px 0px 10px; 
 }
 </style>

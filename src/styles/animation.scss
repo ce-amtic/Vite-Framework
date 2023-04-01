@@ -1,0 +1,111 @@
+//aniFade
+.aniFade-enter-active{
+  animation: aniFadein 0.3s ease-in;
+}
+.aniFade-leave-active{
+  animation: aniFadeout 0.3s ease-out;
+  position: absolute;
+}
+@keyframes aniFadein {
+  from{
+    opacity: 0;
+    size: 0;
+  }
+  to{
+    opacity: 100%;
+    size: 100%;
+  }
+}
+@keyframes aniFadeout {
+  from{
+    opacity: 100%;
+    size: 100%;
+  }
+  to{
+    opacity: 0;
+    size: 0;
+  }
+}
+
+//aniFadeRotate
+.aniFadeRotate-enter-active{
+  animation: aniFadeRotatein 0.3s ease-in;
+}
+.aniFadeRotate-leave-active{
+  animation: aniFadeRotateout 0.3s ease-out;
+  position: absolute;
+}
+@keyframes aniFadeRotatein {
+  from{
+    rotate: -100deg;
+    opacity: 0;
+    size: 0;
+  }
+  to{
+    rotate: 0deg;
+    opacity: 100%;
+    size: 100%;
+  }
+}
+@keyframes aniFadeRotateout {
+  from{
+    rotate: 0deg;
+    opacity: 100%;
+    size: 100%;
+  }
+  to{
+    rotate: 100deg;
+    opacity: 0;
+    size: 0;
+  }
+}
+
+//aniSwitch
+.aniSwitch-enter-active{
+  animation: aniSwitchin 0.25s ease;
+}
+.aniSwitch-leave-active{
+  animation: aniSwitchout 0.25s ease;
+  position: absolute;
+}
+@keyframes aniSwitchin {
+  from{
+    transform: translateX(10px);
+    opacity: 0;
+    size: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 100%;
+    size: 100%
+  }
+}
+@keyframes aniSwitchout {
+  from{
+    transform: translateX(0px);
+    opacity: 100%;
+    size: 100%;
+  }
+  to{
+    transform: translateX(-10px);
+    opacity: 0;
+    size: 0;
+  }
+}
+
+// aniSlide (from left)
+.aniSlide-enter-active{
+  animation: aniSlidein 0.18s ease;
+}
+.aniSlide-leave-active{
+  animation: aniSlidein 0.18s ease reverse;
+  position: absolute;
+}
+@keyframes aniSlidein {
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}

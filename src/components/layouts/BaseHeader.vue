@@ -1,64 +1,64 @@
 <template>
-  <el-menu class="hidden-sm-and-down" mode="horizontal">
+  <!--l-screen-->
+  <el-menu 
+    class="hidden-sm-and-down" 
+    mode="horizontal"
+    :ellipsis="false"
+  >
     <a class="logo-box" href="">
       <img alt="logo" class="logo" src="../../assets/logo.png" width="10%"/>
     </a>
-    <div class="title">
-      <p>{{ appTitle }}</p>
+    <div class="title"> <p>{{ appTitle }}</p> </div>
+    <div class="flex-grow">
+      <el-sub-menu index="1">
+        <template #title><el-icon><Tools /></el-icon></template>
+        <el-menu-item index="1-1">item one</el-menu-item>
+        <el-menu-item index="1-2">item two</el-menu-item>
+        <el-menu-item index="1-3">item three</el-menu-item>
+      </el-sub-menu>
     </div>
   </el-menu> 
+  <!--sm-screen-->
   <el-menu class="hidden-sm-and-up" mode="horizontal">
     <a class="logo-box-sm" href="/">
       <img alt="logo" class="logo" src="../../assets/logo-s.png" width="10%"/>
     </a>
     <p>{{ appTitleShorten }}</p>
-  </el-menu> 
-
-  <!--el-menu class="el-menu-demo" mode="horizontal">
-    <el-menu-item index="1">Element Plus</el-menu-item>
-    <el-sub-menu index="2">
-      <template #title>Workspace</template>
-      <el-menu-item index="2-1">item one</el-menu-item>
-      <el-menu-item index="2-2">item two</el-menu-item>
-      <el-menu-item index="2-3">item three</el-menu-item>
-      <el-sub-menu index="2-4">
-        <template #title>item four</template>
-        <el-menu-item index="2-4-1">item one</el-menu-item>
-        <el-menu-item index="2-4-2">item two</el-menu-item>
-        <el-menu-item index="2-4-3">item three</el-menu-item>
-      </el-sub-menu>
-    </el-sub-menu>
-    <el-menu-item index="3" disabled>Info</el-menu-item>
-    <el-menu-item index="4">Orders</el-menu-item>
-    <el-menu-item h="full" @click="toggleDark()">
-      <button class="border-none w-full bg-transparent cursor-pointer" style="height: var(--ep-menu-item-height);">
-        <i inline-flex i="dark:ep-moon ep-sunny" />
-      </button>
-    </el-menu-item>
-  </el-menu-->
+  </el-menu>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
+import {
+  Tools
+} from '@element-plus/icons-vue'
+
+const activeIndex = ref('1')
+const handleSelect = (key: string, keyPath: string[]) => {
+  console.log(key, keyPath)
+}
+
 const appTitle = "Vite Framework Based on Element+"
 const appTitleShorten = "Vite Framework"
 </script>
 
 <style scoped>
 .hidden-sm-and-down {
-  height: 62px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: left;
   box-shadow: var(--ep-text-color-disabled) 0px -2px 10px;
-  z-index: 10;
+  z-index: 10;  
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .hidden-sm-and-up {
-  height: 52px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: auto;
-  box-shadow: var(--ep-text-color-disabled) 0px 0px 10px;
+  font-size: 20px;
+  box-shadow: var(--ep-text-color-disabled) 0px -2px 10px;
   z-index: 10;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -83,5 +83,19 @@ const appTitleShorten = "Vite Framework"
 .logo {
   height: 100%;
   width: auto;
+}
+.flex-grow {
+  padding: 20px;
+  display: flex;
+  justify-content: right;
+  flex-grow: 1;  
+}
+.settings:hover {
+  animation: rotate120 .5s ease-out;
+}
+@keyframes rotate120 {
+  100% {
+    transform: rotate(120deg);
+  }
 }
 </style>

@@ -4,7 +4,7 @@
     <BaseHeader />
     <el-container>
       <BaseSide />
-      <el-container style="z-index: 8">
+      <el-container style="z-index: 8;">
         <el-main> <RouterView></RouterView> </el-main>
         <el-footer class="el-footer-demo" 
           style="height: auto; align-items: center;"

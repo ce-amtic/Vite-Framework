@@ -11,6 +11,7 @@ import router from "~/router"
 // or use cdn, uncomment cdn link in `index.html`
 
 import "~/styles/index.scss";
+import "~/styles/animation.scss";
 import 'uno.css'
 
 // If you want to use ElMessage, import it.

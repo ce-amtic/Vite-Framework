@@ -20,11 +20,11 @@
     *.ts
   router/
     index.ts ----------- using RouterView
-  styles/
+  styles/ -------------- scss files
     element/
-      dark.scss -------- import dark theme
+      dark.scss
       index.scss
-    index.scss
+    *.scss
   view/
     *.vue -------------- pages
   App.vue -------------- main window
