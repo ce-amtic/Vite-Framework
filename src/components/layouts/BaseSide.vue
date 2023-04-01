@@ -13,9 +13,9 @@
       <el-icon><Home /></el-icon>
       <template #title>Home</template>
     </el-menu-item>
-    <el-menu-item index="/about">
-      <el-icon><About /></el-icon>
-      <template #title>About</template>
+    <el-menu-item index="/examples">
+      <el-icon><Examples /></el-icon>
+      <template #title>Examples</template>
     </el-menu-item>
     <el-menu-item index="/layout">
       <el-icon><Layout /></el-icon>
@@ -37,6 +37,18 @@
       <template v-if="isDark" #title>Light Mode</template>
       <template v-else #title>Dark Mode</template>
     </el-menu-item>
+    <!--el-menu-item 
+      @click.native.passive="toggleCollapse()"
+    ><transition name="aniFadeRotate">
+      <el-icon v-if="isCollapse">
+        <Expand />
+      </el-icon>
+      <el-icon v-else>
+        <Fold />
+      </el-icon></transition>
+      <template v-if="isCollapse" #title>Expand</template>
+      <template v-else #title>Fold</template>
+    </el-menu-item-->
   </el-menu>
 </transition>
 </template>
@@ -51,7 +63,7 @@ import {
 import { ref } from 'vue'
 import {
   HomeFilled as Home,
-  InfoFilled as About,
+  InfoFilled as Examples,
   Grid as Layout,
   Avatar as Worship,
   Expand, Fold,

@@ -1,5 +1,5 @@
 <template>
-  <h1>About</h1>
+  <h1>Examples</h1>
   <p>
     See
     <a href="https://element-plus.org" target="_blank">element-plus</a> for
@@ -156,6 +156,8 @@ const toggleSlide = () => {
   var4.value =! var4.value;
   isFold.value =! isFold.value;
 }
+
+const select = ref('')
 </script>
 
 <style>
@@ -163,8 +165,13 @@ const toggleSlide = () => {
   text-align: center;
   color: var(--ep-text-color-primary);
 }
-
 .element-plus-logo {
   width: 50%;
+}
+.el-select .el-input {
+  width: 130px;
+}
+.input-with-select .el-input-group__prepend {
+  background-color: #fff;
 }
 </style>

@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory, createWebHashHistory } from "vue-router";
 import Home from "~/view/Home.vue"
-import About from "~/view/About.vue"
+import Examples from "~/view/Examples.vue"
 import Layout from "~/view/Layout.vue"
 import Worship from "~/view/Worship.vue"
 
 const routes = [
     {path: '/', name: 'Home', component: Home},
-    {path: '/About', name: 'About', component: About},
+    {path: '/examples', name: 'Examples', component: Examples},
     {path: '/layout', name: 'Layout', component: Layout},
     {path: '/worship', name: 'Worship', component: Worship},
   ]

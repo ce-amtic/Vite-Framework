@@ -14,7 +14,6 @@
       BaseHeader.vue --- header
       BaseSide.vue ----- vertical navigate bar
       BaseFooter.vue --- footer
-    HelloWorld.vue ----- Element-Plus examples
     *.vue -------------- components
   composables/ --------- global declare
     *.ts
