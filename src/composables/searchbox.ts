@@ -23,5 +23,5 @@ export const sboxAnime = ref(false)
 export const toggleSearch = () => {
   sboxShowDebug.value =! sboxShowDebug.value
   sboxAnime.value =! sboxAnime.value
-  setTimeout(() => { sboxAnime.value =! sboxAnime.value }, 250);
+  setTimeout(() => { sboxAnime.value =! sboxAnime.value }, 280);
 }

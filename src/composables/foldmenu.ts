@@ -11,7 +11,7 @@ export const isFold = ref(window.value.width<768?true:false)
 export const toggleFold = () => {
   isFold.value =! isFold.value;
   buttonAnime.value =! buttonAnime.value
-  setTimeout(() => { buttonAnime.value =! buttonAnime.value }, 250);
+  setTimeout(() => { buttonAnime.value =! buttonAnime.value }, 300);
 }
 
 export const isCollapse = ref(true)

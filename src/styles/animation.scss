@@ -177,7 +177,7 @@ make sure <variable> is modified during the event, and its value is set to `true
 
 // aniPressed
 .aniPressed {
-  animation: aniPressed 0.25s ease both;
+  animation: aniPressed 0.25s ease-in-out;
 }
 @keyframes aniPressed {
   from, to {
@@ -188,7 +188,7 @@ make sure <variable> is modified during the event, and its value is set to `true
   }
 }
 .aniPressedFade {
-  animation: aniPressedFade 0.28s ease both;
+  animation: aniPressedFade 0.28s ease-in-out;
 }
 @keyframes aniPressedFade {
   from, to {
@@ -196,7 +196,7 @@ make sure <variable> is modified during the event, and its value is set to `true
     opacity: 100%;
   }
   50% {
-    transform: scale(80%);
-    opacity: 50%;
+    transform: scale(83%);
+    opacity: 45%;
   }
 }

@@ -45,12 +45,23 @@
       </el-button>
     </el-col>
   </el-row>
+</div>
+<div class="my-2 text-center flex flex-wrap justify-center items-center">
   <el-row style="width: 800px; padding-top: 10px;color: var(--ep-text-color-secondary);font-size:14px;font-family: 'Courier New', Courier, monospace">
     <el-col :offset="2" :span="4">'aniFade'</el-col>
     <el-col :span="4">'aniFadeSwitch'</el-col>
     <el-col :span="4">'aniFadeRotate'</el-col>
     <el-col :span="4">'aniSwitch'</el-col>
     <el-col :span="4">'aniSlide'</el-col>
+  </el-row>
+</div>
+<div class="my-2 text-center flex flex-wrap justify-center items-center">
+  <el-row style="width: 800px; padding-top: 10px;color: var(--ep-text-color-secondary);font-size:14px;font-family: 'Courier New', Courier, monospace">
+    <el-col :offset="2" :span="4">300ms</el-col>
+    <el-col :span="4">300ms</el-col>
+    <el-col :span="4">300ms</el-col>
+    <el-col :span="4">250ms</el-col>
+    <el-col :span="4">180ms</el-col>
   </el-row>
 </div>
 
@@ -81,11 +92,21 @@
       </el-button>
     </el-col>
   </el-row>
+</div>
+<div class="my-2 text-center flex flex-wrap justify-center items-center">
   <el-row style="width: 600px; padding-top: 10px;color: var(--ep-text-color-secondary);font-size:14px;font-family: 'Courier New', Courier, monospace">
     <el-col :span="6">'aniShake'</el-col>
     <el-col :span="6">'aniShakeIntense'</el-col>
     <el-col :span="6">'aniPressed'</el-col>
     <el-col :span="6">'aniPressedFade'</el-col>
+  </el-row>
+</div>
+<div class="my-2 text-center flex flex-wrap justify-center items-center">
+  <el-row style="width: 600px; padding-top: 10px;color: var(--ep-text-color-secondary);font-size:14px;font-family: 'Courier New', Courier, monospace">
+    <el-col :span="6">800ms</el-col>
+    <el-col :span="6">820ms</el-col>
+    <el-col :span="6">250ms</el-col>
+    <el-col :span="6">280ms</el-col>
   </el-row>
 </div>
   <br>
@@ -94,6 +115,9 @@
   </p>
   <p>
     Make sure <code>&lt;variable&gt;</code> is modified during the event, and its value is set to <code>true</code>.
+  </p>
+  <p>
+    To set timeout, refer to the lasting time for each animation in the 2nd line.
   </p>
 
   <br>
@@ -141,11 +165,11 @@ const var1 = ref(false), var2 = ref(false), var3 = ref(false), var4 = ref(false)
       var5=ref(false), var6 = ref(false), var7 = ref(false), var8 = ref(false);
 const fun5 = () => {
   var5.value =! var5.value
-  setTimeout(() => { var5.value =! var5.value }, 250);
+  setTimeout(() => { var5.value =! var5.value }, 800);
 }
 const fun6 = () => {
   var6.value =! var6.value
-  setTimeout(() => { var6.value =! var6.value }, 250);
+  setTimeout(() => { var6.value =! var6.value }, 820);
 }
 const fun7 = () => {
   var7.value =! var7.value
@@ -153,7 +177,7 @@ const fun7 = () => {
 }
 const fun8 = () => {
   var8.value =! var8.value
-  setTimeout(() => { var8.value =! var8.value }, 250);
+  setTimeout(() => { var8.value =! var8.value }, 280);
 }
 
 const toggleSlide = () => {
