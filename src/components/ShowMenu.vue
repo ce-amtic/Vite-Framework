@@ -1,12 +1,13 @@
 <template>
   <div class="hidden-sm-and-up">
-    <el-button class="float-button"
+    <el-button
+      :class="{aniPressed: buttonAnime, 'float-button': true}"
       type="primary"
       circle 
       size="large"
       @click="toggleFold"
     >
-      <transition name="aniFadeRotate">
+      <transition name="aniFadeSwitch">
         <el-icon v-if="isFold"><Menu /></el-icon>
         <el-icon v-else><FoldMenu /></el-icon>
       </transition>
@@ -15,7 +16,8 @@
 </template>
 
 <script lang="ts" setup>
-import { isFold, toggleFold } from "~/composables"
+import { ref } from 'vue'
+import { isFold, toggleFold, buttonAnime } from "~/composables"
 import {
   Menu,
   Fold as FoldMenu,

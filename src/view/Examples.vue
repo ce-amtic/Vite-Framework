@@ -7,7 +7,16 @@
   </p>
 
   <!-- example components -->
-  <div class="mb-4">
+  <div class="my-2 text-center flex flex-wrap justify-center items-center">
+    <SearchBox />
+  </div>
+  <el-collapse-transition>
+  <div v-if="sboxShowDebug" class="mb-4">
+    <p>Select: {{ selectID }} | Forms: {{ inputForm }}</p>
+  </div>
+  </el-collapse-transition>
+
+  <div class="mb-4" style="padding-top: 20px">
     <el-button size="large" @click="toast">El Message</el-button>
   </div>
   
@@ -32,76 +41,6 @@
     <el-input class="m-2" v-model="input" style="width: 200px;" />
     <el-date-picker class="m-2" v-model="curDate" type="date" placeholder="Pick a day"></el-date-picker>
   </div>
-
-  <br>
-  <p>Use <code>&lt;transition name=''&gt;</code> to enable built-in transition animations.</p>
-
-  <el-row>
-    <el-col :offset="8" :span="2">
-      <el-button
-        circle 
-        size="large"
-        @click="var1=!var1"
-      >
-        <transition name="aniFade">
-          <el-icon v-if="!var1"><VideoPlay /></el-icon>
-          <el-icon v-else><VideoPause /></el-icon>
-        </transition>
-      </el-button>
-    </el-col>
-    <el-col :span="2">
-      <el-button
-        circle 
-        size="large"
-        @click="var2=!var2"
-      >
-        <transition name="aniFadeRotate">
-          <el-icon v-if="!var2"><Check /></el-icon>
-          <el-icon v-else><Close /></el-icon>
-        </transition>
-      </el-button>
-    </el-col>
-    <el-col :span="2">
-      <el-button
-        circle 
-        size="large"
-        @click="var3=!var3"
-      >
-        <transition name="aniSwitch">
-          <el-icon v-if="!var3"><Switch /></el-icon>
-          <el-icon v-else><Finished /></el-icon>
-        </transition>
-      </el-button>
-    </el-col>
-    <el-col :span="2">
-      <el-button
-        circle 
-        size="large"
-        @click="toggleSlide"
-      >
-        <transition name="aniFadeRotate">
-          <el-icon v-if="!var4"><ArrowLeft /></el-icon>
-          <el-icon v-else><ArrowRight /></el-icon>
-        </transition>
-      </el-button>
-    </el-col>
-  </el-row>
-  <el-row 
-     style="padding-top: 10px;
-      color: var(--ep-text-color-secondary); 
-      font-size:14px; 
-      font-family: 'Courier New', Courier, monospace"
-    >
-    <el-col :offset="8" :span="2">'aniFade'</el-col>
-    <el-col :span="2">'aniFadeRotate'</el-col>
-    <el-col :span="2">'aniSwitch'</el-col>
-    <el-col :span="2">'aniSlide'</el-col>
-  </el-row>
-
-  <p>
-    Edit
-    <code>styles/animation.scss</code> to custom animations.
-  </p>
 
   <br>
   <p>For example, we can custom primary color to 'green'.</p>
@@ -138,7 +77,10 @@ import {
   VideoPause, VideoPlay,
   ArrowLeft, ArrowRight,
 } from '@element-plus/icons-vue'
-import { isFold } from "~/composables";
+import { 
+  isFold, 
+  sboxShowDebug, selectID, inputForm
+} from "~/composables";
 
 defineProps<{ msg: string }>();
 
@@ -156,22 +98,11 @@ const toggleSlide = () => {
   var4.value =! var4.value;
   isFold.value =! isFold.value;
 }
-
-const select = ref('')
 </script>
 
-<style>
+<style scoped>
 #app {
   text-align: center;
   color: var(--ep-text-color-primary);
-}
-.element-plus-logo {
-  width: 50%;
-}
-.el-select .el-input {
-  width: 130px;
-}
-.input-with-select .el-input-group__prepend {
-  background-color: #fff;
 }
 </style>

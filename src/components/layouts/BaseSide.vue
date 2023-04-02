@@ -9,21 +9,15 @@
     @close="handleClose"
     v-if="!isFold"
   >
-    <el-menu-item index="/">
-      <el-icon><Home /></el-icon>
-      <template #title>Home</template>
-    </el-menu-item>
-    <el-menu-item index="/examples">
-      <el-icon><Examples /></el-icon>
-      <template #title>Examples</template>
-    </el-menu-item>
-    <el-menu-item index="/layout">
-      <el-icon><Layout /></el-icon>
-      <template #title>Layout</template>
-    </el-menu-item>
-    <el-menu-item index="/worship">
-      <el-icon><Worship /></el-icon>
-      <template #title>STO sls Orz</template>
+    <el-menu-item v-for="route in routes" :key="route.path" :index="route.path">
+      <el-icon>
+        <Home v-if="route.name=='Home'"/>
+        <Examples v-if="route.name=='Examples'"/>
+        <Animations v-if="route.name=='Animations'"/>
+        <Layout v-if="route.name=='Layout'"/>
+        <Worship v-if="route.name=='Worship'"/>
+      </el-icon>
+      <template #title>{{ route.name }}</template>
     </el-menu-item>
     <el-menu-item 
       @click.native.passive="toggleDark()"
@@ -54,20 +48,20 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
+import {
+  HomeFilled as Home,
+  List as Examples,
+  Promotion as Animations,
+  Grid as Layout,
+  Avatar as Worship,
+} from '@element-plus/icons-vue'
+import { routes } from '~/router'
 import { 
   isDark, toggleDark, 
   isCollapse, toggleCollapse,
   isFold, 
-  window,
 } from '~/composables';
-import { ref } from 'vue'
-import {
-  HomeFilled as Home,
-  InfoFilled as Examples,
-  Grid as Layout,
-  Avatar as Worship,
-  Expand, Fold,
-} from '@element-plus/icons-vue'
 
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
@@ -75,7 +69,9 @@ const handleOpen = (key: string, keyPath: string[]) => {
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
-const isSM = ref(window.value.width <= 768)
+const createIcon = (iconName: string) => {
+  document.createElement(iconName)
+}
 </script>
 
 <style scoped>
