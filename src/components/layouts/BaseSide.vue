@@ -15,7 +15,6 @@
         <Examples v-if="route.name=='Examples'"/>
         <Animations v-if="route.name=='Animations'"/>
         <Layout v-if="route.name=='Layout'"/>
-        <Worship v-if="route.name=='Worship'"/>
       </el-icon>
       <template #title>{{ route.name }}</template>
     </el-menu-item>

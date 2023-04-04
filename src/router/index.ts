@@ -3,14 +3,14 @@ import Home from "~/view/Home.vue"
 import Examples from "~/view/Examples.vue"
 import Animations from "~/view/Animations.vue"
 import Layout from "~/view/Layout.vue"
-import Worship from "~/view/Worship.vue"
+// import Worship from "~/view/Worship.vue"
 
 export const routes = [
   {path: '/', name: 'Home', component: Home},
   {path: '/examples', name: 'Examples', component: Examples},
   {path: '/animations', name: 'Animations', component: Animations},
   {path: '/layout', name: 'Layout', component: Layout},
-  {path: '/worship', name: 'Worship', component: Worship},
+  // {path: '/worship', name: 'Worship', component: Worship},
 ]
 
 const router = createRouter({
